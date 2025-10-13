@@ -1,0 +1,39 @@
+# ======================
+# 🚀 FastAPI 核心
+# ======================
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# ======================
+# 🗄️ 数据库（Supabase + ORM）
+# ======================
+sqlalchemy==2.0.23
+alembic==1.13.0
+# psycopg2-binary==2.9.9  # ❌ 移除 PostgreSQL 驱动
+supabase==2.3.0           # ✅ Supabase Python SDK
+gotrue==2.5.0             # 用户认证（Auth）
+postgrest==0.13.0         # 数据表访问（Database）
+realtime==1.0.0           # 实时推送（Realtime）
+storage3==0.6.0           # 文件存储（Storage）
+httpx==0.24.0             # 异步 HTTP 支持（Supabase 依赖）
+
+# ======================
+# 🔐 认证与安全
+# ======================
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+
+# ======================
+# ⚙️ 配置与工具
+# ======================
+python-dotenv==1.0.0
+email-validator==2.1.0
+
+# ======================
+# 🧪 测试工具
+# ======================
+pytest==7.4.3
+pytest-asyncio==0.21.1
