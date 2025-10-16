@@ -1,0 +1,12 @@
+services:
+  db:
+    image: registry.cn-hangzhou.aliyuncs.com/library/postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: miniblog
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/db:/var/lib/postgresql/data

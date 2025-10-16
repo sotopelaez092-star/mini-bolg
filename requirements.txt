@@ -11,19 +11,22 @@ pydantic-settings==2.1.0
 # ======================
 sqlalchemy==2.0.23
 alembic==1.13.0
-# psycopg2-binary==2.9.9  # ❌ 移除 PostgreSQL 驱动
+psycopg2-binary==2.9.9    # ✅ PostgreSQL 驱动（同步）
 supabase==2.3.0           # ✅ Supabase Python SDK
 gotrue==2.5.0             # 用户认证（Auth）
 postgrest==0.13.0         # 数据表访问（Database）
 realtime==1.0.0           # 实时推送（Realtime）
 storage3==0.6.0           # 文件存储（Storage）
 httpx==0.24.0             # 异步 HTTP 支持（Supabase 依赖）
+asyncpg==0.29.0           # ✅ PostgreSQL 异步驱动（SQLAlchemy asyncio）
+greenlet==3.0.1           # ✅ SQLAlchemy asyncio 所需的协程栈支持
 
 # ======================
 # 🔐 认证与安全
 # ======================
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
+bcrypt==3.2.2
 python-multipart==0.0.6
 
 # ======================
